@@ -1,0 +1,299 @@
+<!-- Herencia de template -->
+{% extends 'autosMarket/base.html' %}
+
+<!-- Tag DJANGO -->
+{% load static %}
+{% block contenido %}
+<body>
+    
+    <!-- HeroImage -->
+    <section class="home">
+        <article class="hero-image hero-image-galeria">
+            <aside class="hero-image-opacity">
+                <div class="hero-image-content">
+                    <h2 class="hero-image-title ">
+                        Raio Macuin te conoce<br>!Aquí está tu solución!
+                    </h2>
+                </div>
+            </aside>
+        </article>
+    </section>
+
+
+    <h1>Galería Autos</h1>
+    <span class="linea"></span>
+    <!-- Maseratti Convertible -->
+    <h1 id="convertible">Convertibles</h1>
+    <span class="linea"></span>
+    <section class="galeria">
+        <a href="#image1"><img src="{% static 'autosMarket/img/maserattiCon01.jpg' %}" alt=""></a>
+        <a href="#image2"><img src="{% static 'autosMarket/img/maserattiCon02.jpg' %}" alt=""></a>
+        <a href="#image3"><img src="{% static 'autosMarket/img/maserattiCon03.jpg' %}" alt=""></a>
+        <a href="#image4"><img src="{% static 'autosMarket/img/maserattiCon04.jpg' %}" alt=""></a>
+    </section>
+    <article class="light-box" id="image1">
+        <a href="#image4" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="{% static 'autosMarket/img/maserattiCon01.jpg' %}" alt="">
+        <a href="#image2" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#close" class="close">X</a>
+    </article>
+
+    <article class="light-box" id="image2">
+        <a href="#image1" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="{% static 'autosMarket/img/maserattiCon02.jpg' %}" alt="">
+        <a href="#image3" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#close" class="close">X</a>
+    </article>
+
+    <article class="light-box" id="image3">
+        <a href="#image2" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="{% static 'autosMarket/img/maserattiCon03.jpg' %}" alt="">
+        <a href="#image4" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#close" class="close">X</a>
+    </article>
+
+    <article class="light-box" id="image4">
+        <a href="#image3" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="{% static 'autosMarket/img/maserattiCon04.jpg' %}" alt="">
+        <a href="#image1" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#close" class="close">X</a>
+    </article>
+    <span class="linea"></span>
+    <!-- Volkswagen Hatchback -->
+    <h1 id="hatchback">Hatchback</h1>
+    <span class="linea"></span>
+    <section class="galeria">
+        <a href="#image5"><img src="{% static 'autosMarket/img/volkswagenHb01.jpg' %}" alt=""></a>
+        <a href="#image6"><img src="{% static 'autosMarket/img/volkswagenHb02.jpg' %}" alt=""></a>
+        <a href="#image7"><img src="{% static 'autosMarket/img/volkswagenHb03.jpg' %}" alt=""></a>
+        <a href="#image8"><img src="{% static 'autosMarket/img/volkswagenHb04.jpg' %}" alt=""></a>
+    </section>
+
+    <article class="light-box" id="image5">
+        <a href="#image8" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="{% static 'autosMarket/img/volkswagenHb01.jpg' %}" alt="">
+        <a href="#image6" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#close" class="close">X</a>
+    </article>
+
+    <article class="light-box" id="image6">
+        <a href="#image5" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="{% static 'autosMarket/img/volkswagenHb02.jpg' %}" alt="">
+        <a href="#image7" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#close" class="close">X</a>
+    </article>
+
+    <article class="light-box" id="image7">
+        <a href="#image6" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="{% static 'autosMarket/img/volkswagenHb03.jpg' %}" alt="">
+        <a href="#image8" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#close" class="close">X</a>
+    </article>
+
+    <article class="light-box" id="image8">
+        <a href="#image7" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="{% static 'autosMarket/img/volkswagenHb04.jpg' %}" alt="">
+        <a href="#image5" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#close" class="close">X</a>
+    </article>
+    <span class="linea"></span>
+    <!-- Renalut Furgones -->
+    <h1 id="furgon">Furgones</h1>
+    <span class="linea"></span>
+    <section class="galeria">
+        <a href="#image9"><img src="{% static 'autosMarket/img/renalutFg01.jp' %}g" alt=""></a>
+        <a href="#image10"><img src="{% static 'autosMarket/img/renalutFg02.jp' %}g" alt=""></a>
+        <a href="#image11"><img src="{% static 'autosMarket/img/renalutFg03.jp' %}g" alt=""></a>
+        <a href="#image12"><img src="{% static 'autosMarket/img/renalutFg04.jp' %}g" alt=""></a>
+    </section>
+
+    <article class="light-box" id="image9">
+        <a href="#image12" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="{% static 'autosMarket/img/renalutFg01.jp' %}g" alt="">
+        <a href="#image10" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#close" class="close">X</a>
+    </article>
+
+    <article class="light-box" id="image10">
+        <a href="#image9" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="{% static 'autosMarket/img/renalutFg02.jp' %}g" alt="">
+        <a href="#image11" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#close" class="close">X</a>
+    </article>
+
+    <article class="light-box" id="image11">
+        <a href="#image10" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="{% static 'autosMarket/img/renalutFg03.jp' %}g" alt="">
+        <a href="#image12" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#close" class="close">X</a>
+    </article>
+
+    <article class="light-box" id="image12">
+        <a href="#image11" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="{% static 'autosMarket/img/renalutFg04.jp' %}g" alt="">
+        <a href="#image9" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#close" class="close">X</a>
+    </article>
+    <span class="linea"></span>
+    <!-- Tesla Sedan -->
+    <h1 id="sedan">Sedan</h1>
+    <span class="linea"></span>
+    <section class="galeria">
+        <a href="#image13"><img src="{% static 'autosMarket/img/teslaSedan01.j' %}pg" alt=""></a>
+        <a href="#image14"><img src="{% static 'autosMarket/img/teslaSedan02.j' %}pg" alt=""></a>
+        <a href="#image15"><img src="{% static 'autosMarket/img/teslaSedan03.j' %}pg" alt=""></a>
+        <a href="#image16"><img src="{% static 'autosMarket/img/teslaSedan04.j' %}pg" alt=""></a>
+    </section>
+
+    <article class="light-box" id="image13">
+        <a href="#image16" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="{% static 'autosMarket/img/teslaSedan01.j' %}pg" alt="">
+        <a href="#image14" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#close" class="close">X</a>
+    </article>
+
+    <article class="light-box" id="image14">
+        <a href="#image13" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="{% static 'autosMarket/img/teslaSedan02.j' %}pg" alt="">
+        <a href="#image15" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#close" class="close">X</a>
+    </article>
+
+    <article class="light-box" id="image15">
+        <a href="#image14" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="{% static 'autosMarket/img/teslaSedan03.j' %}pg" alt="">
+        <a href="#image16" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#close" class="close">X</a>
+    </article>
+
+    <article class="light-box" id="image16">
+        <a href="#image15" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="{% static 'autosMarket/img/teslaSedan04.j' %}pg" alt="">
+        <a href="#image13" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#close" class="close">X</a>
+    </article>
+    <span class="linea"></span>
+    <!-- Toyota Doble Cabina -->
+    <h1 id="doblecabina">Doble Cabina</h1>
+    <span class="linea"></span>
+    <section class="galeria">
+        <a href="#image17"><img src="{% static 'autosMarket/img/toyotaDc01.jpg' %}" alt=""></a>
+        <a href="#image18"><img src="{% static 'autosMarket/img/toyotaDc02.jpg' %}" alt=""></a>
+        <a href="#image19"><img src="{% static 'autosMarket/img/toyotaDc03.jpg' %}" alt=""></a>
+        <a href="#image20"><img src="{% static 'autosMarket/img/toyotaDc04.jpg' %}" alt=""></a>
+    </section>
+
+    <article class="light-box" id="image17">
+        <a href="#image20" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="{% static 'autosMarket/img/toyotaDc01.jpg' %}" alt="">
+        <a href="#image18" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#close" class="close">X</a>
+    </article>
+
+    <article class="light-box" id="image18">
+        <a href="#image19" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="{% static 'autosMarket/img/toyotaDc02.jpg' %}" alt="">
+        <a href="#image17" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#close" class="close">X</a>
+    </article>
+
+    <article class="light-box" id="image19">
+        <a href="#image20" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="{% static 'autosMarket/img/toyotaDc03.jpg' %}" alt="">
+        <a href="#image18" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#close" class="close">X</a>
+    </article>
+
+    <article class="light-box" id="image20">
+        <a href="#image19" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="{% static 'autosMarket/img/toyotaDc04.jpg' %}" alt="">
+        <a href="#image17" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#close" class="close">X</a>
+    </article>
+    <span class="linea"></span>
+    <!-- Nissan Station Wagon -->
+    <h1 id="stationwagon">Station Wagon</h1>
+    <span class="linea"></span>
+    <section class="galeria">
+        <a href="#image21"><img src="{% static 'autosMarket/img/nissanSw01.jpg' %}" alt=""></a>
+        <a href="#image22"><img src="{% static 'autosMarket/img/nissanSw02.jpg' %}" alt=""></a>
+        <a href="#image23"><img src="{% static 'autosMarket/img/nissanSw03.jpg' %}" alt=""></a>
+        <a href="#image24"><img src="{% static 'autosMarket/img/nissanSw04.jpg' %}" alt=""></a>
+    </section>
+
+    <article class="light-box" id="image21">
+        <a href="#image24" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="{% static 'autosMarket/img/nissanSw01.jpg' %}" alt="">
+        <a href="#image22" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#close" class="close">X</a>
+    </article>
+
+    <article class="light-box" id="image22">
+        <a href="#image21" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="{% static 'autosMarket/img/nissanSw02.jpg' %}" alt="">
+        <a href="#image23" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#close" class="close">X</a>
+    </article>
+
+    <article class="light-box" id="image23">
+        <a href="#image22" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="{% static 'autosMarket/img/nissanSw03.jpg' %}" alt="">
+        <a href="#image24" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#close" class="close">X</a>
+    </article>
+
+    <article class="light-box" id="image24">
+        <a href="#image23" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="{% static 'autosMarket/img/nissanSw04.jpg' %}" alt="">
+        <a href="#image21" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#close" class="close">X</a>
+    </article>
+    <span class="linea"></span>
+    <!-- Honda SUV -->
+    <h1 id="suv">SUV</h1>
+    <span class="linea"></span>
+    <section class="galeria">
+        <a href="#image25"><img src="{% static 'autosMarket/img/hondaSuv01.jpg' %}" alt=""></a>
+        <a href="#image26"><img src="{% static 'autosMarket/img/hondaSuv02.jpg' %}" alt=""></a>
+        <a href="#image27"><img src="{% static 'autosMarket/img/hondaSuv03.jpg' %}" alt=""></a>
+        <a href="#image28"><img src="{% static 'autosMarket/img/hondaSuv04.jpg' %}" alt=""></a>
+    </section>
+
+    <article class="light-box" id="image25">
+        <a href="#image28" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="{% static 'autosMarket/img/hondaSuv01.jpg' %}" alt="">
+        <a href="#image26" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#close" class="close">X</a>
+    </article>
+
+    <article class="light-box" id="image26">
+        <a href="#image25" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="{% static 'autosMarket/img/hondaSuv02.jpg' %}" alt="">
+        <a href="#image27" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#close" class="close">X</a>
+    </article>
+
+    <article class="light-box" id="image27">
+        <a href="#image26" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="{% static 'autosMarket/img/hondaSuv03.jpg' %}" alt="">
+        <a href="#image28" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#close" class="close">X</a>
+    </article>
+
+    <article class="light-box" id="image28">
+        <a href="#image27" class="next"><i class="fas fa-arrow-left"></i></a>
+        <img src="{% static 'autosMarket/img/hondaSuv04.jpg' %}" alt="">
+        <a href="#image25" class="next"><i class="fas fa-arrow-right"></i></a>
+        <a href="#close" class="close">X</a>
+    </article>
+
+{% static 'autosMarket/
+
+    <!-- SCRIPTS --> %}
+    <script type="text/javascript" src="js/formulario-validacion.js"></script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js " integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf " crossorigin="anonymous "></script>
+</body>
+
+
+{% endblock %}

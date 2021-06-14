@@ -18,5 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # se incluye las rutas que estan en el urls de la pagina principal
     path('', include('autosMarket.urls')),
 ]
