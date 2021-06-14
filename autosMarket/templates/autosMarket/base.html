@@ -13,6 +13,10 @@
     <!-- Tag DJANGO -->
     {% load static %}
 
+    <!-- Bloque css que se sobreescribira posteriormente -->
+    {% block css %}
+    {% endblock %}
+
     <link rel="stylesheet" href="{% static 'autosMarket/css/index.css' %}">
     <link rel="stylesheet" href="{% static 'autosMarket/css/autosNuevos.css' %}">
     <link rel="stylesheet" href="{% static 'autosMarket/css/autosUsados.css' %}">
@@ -245,7 +249,8 @@
         {% block contenido %}
         {% endblock %}
 
-    </div>    
+    </div> 
+
 
 <footer class="footer bg-dark">
     <div class="container ">
@@ -278,6 +283,12 @@
             <p><i class="fa fa-copyright " aria-hidden="true "></i> Todos los derechos reservados.</p>
         </div>
     </div>
+
+    <!-- Declara bloque para cargar archivos javaScript -->
+    {% block js %}
+    {% endblock %}
+
+
 </footer>
 
 
