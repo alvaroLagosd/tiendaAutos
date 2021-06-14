@@ -1,42 +1,11 @@
-<!DOCTYPE html>
-<html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Llamando archivo que agrega el header y footer con AJAX -->
-    <script src="js/include-html.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-    <link rel="stylesheet" href="css/index.css">
+{% extends 'autosMarket/base.html' %}
 
-    <!--* ********** Etiquetas para el SEO ********** *-->
-    <title>Raio Macuin</title>
-
-    <!-- Etiqueta del SEO para definir un icono -->
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <!-- Etiqueta del SEO para definir una descripción del sitio(que aparece al buscar el sitio) -->
-    <meta name="description" content="Hola bienvenid@s al sitio Raio Macuin, encontrarás las mejores ofertas y lo que necesitas aquí">
-    <!-- Etiqueta del SEO para definir una URL canónica que previene que se penalice el SEO cuando
-    se ingresa al sitio con diferentes URLs por lo tanto en esta etiqueta se define la URL principal -->
-    <link rel="canonical" href="https://josueaguilera14.github.io/CompraVentaAuto">
-    <!-- Etiqueta del SEO para definir el color de la ventana del navegador en dispositivos móviles -->
-    <meta name="theme-color" content="#343a40">
-
-    <!-- Meta etiquetas para Open graph y twitter -->
-    <meta name="twitter:card" content="summary">
-    <meta property="og:type" content="website">
-    <meta property="og:title" name="twitter:title" content="Rayo Macuin - Compra y Venta de Autos">
-    <meta property="og:description" name="twitter:description" content="Hola bienvenid@s al sitio Raio Macuin, encontrarás las mejores ofertas y lo que necesitas aquí">
-    <meta property="og:image" name="twitter:image" content="https://josueaguilera14.github.io/CompraVentaAuto/assets/heroImage.jpg">
-    <meta property="og:url" name="twitter:url" content="https://josueaguilera14.github.io/CompraVentaAuto">
-</head>
+    <!-- Tag DJANGO -->
+{% load static %}
+{% block contenido %}
 
 <body>
-    <!-- Incluyendo Header -->
-    <div data-include="assets/header.html"></div>
-
     <!-- HeroImage -->
     <section class="home">
         <article class="hero-image">
@@ -49,7 +18,6 @@
             </aside>
         </article>
     </section>
-
     <section class="contenido ">
         <!-- agregando al 'style' una variable CSS con la imagen del HeroImage-->
         <article class="hero-image">
@@ -61,7 +29,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
                             <div class="card" style="width: 100%; margin-top: 10px;">
-                                <img src="img/imagen-info1.jpg" class="card-img-top" alt="...">
+                                <img src="{% static 'autosMarket/img/imagen-info1.jpg' %}" class="card-img-top" alt="...">
                                 <div class="card-body bg-dark" style="color: white;">
                                     <h5 class="card-title">¿Conoces los beneficios de comprar tu auto con nosotros?</h5>
                                     <hr>
@@ -81,7 +49,7 @@
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <div class="card" style="width: 100%;">
-                                            <img src="img/slider01.jpg" class="d-block w-100 card-img-top" alt="...">
+                                            <img src="{% static 'autosMarket/img/slider01.jpg' %}" class="d-block w-100 card-img-top" alt="...">
                                             <div class="card-body bg-dark" style="color: white;">
                                                 <h5 class="card-title">Card title</h5>
                                                 <p class="card-text" style="text-align: justify;">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi expedita ea deserunt rerum reprehenderit repellat pariatur harum, nesciunt vitae recusandae, culpa corporis facere est! Non doloribus voluptates
@@ -92,7 +60,7 @@
                                     </div>
                                     <div class="carousel-item">
                                         <div class="card" style="width: 100%;">
-                                            <img src="img/slider02.jpg" class="d-block w-100 card-img-top" alt="...">
+                                            <img src="{% static 'autosMarket/img/slider02.jpg' %}" class="d-block w-100 card-img-top" alt="...">
                                             <div class="card-body bg-dark" style="color: white;">
                                                 <h5 class="card-title">Card title</h5>
                                                 <p class="card-text" style="text-align: justify;">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi expedita ea deserunt rerum reprehenderit repellat pariatur harum, nesciunt vitae recusandae, culpa corporis facere est! Non doloribus voluptates
@@ -103,7 +71,7 @@
                                     </div>
                                     <div class="carousel-item">
                                         <div class="card" style="width: 100%;">
-                                            <img src="img/slider03.jpg" class="d-block w-100 card-img-top" alt="...">
+                                            <img src="{% static 'autosMarket/img/slider03.jpg' %}" class="d-block w-100 card-img-top" alt="...">
                                             <div class="card-body bg-dark" style="color: white;">
                                                 <h5 class="card-title">Card title</h5>
                                                 <p class="card-text" style="text-align: justify;">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi expedita ea deserunt rerum reprehenderit repellat pariatur harum, nesciunt vitae recusandae, culpa corporis facere est! Non doloribus voluptates
@@ -114,7 +82,7 @@
                                     </div>
                                     <div class="carousel-item">
                                         <div class="card" style="width: 100%;">
-                                            <img src="img/slider04.jpg" class="d-block w-100 card-img-top" alt="...">
+                                            <img src="{% static 'autosMarket/img/slider04.jpg' %}" class="d-block w-100 card-img-top" alt="...">
                                             <div class="card-body bg-dark" style="color: white;">
                                                 <h5 class="card-title">Card title</h5>
                                                 <p class="card-text" style="text-align: justify;">"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi expedita ea deserunt rerum reprehenderit repellat pariatur harum, nesciunt vitae recusandae, culpa corporis facere est! Non doloribus voluptates
@@ -128,7 +96,7 @@
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-3">
                             <div class="card " style="width: 100%; margin-top: 10px; " ">
-                                <img src="img/imagen-info2.jpg " class="card-img-top " alt="... ">
+                                <img src="{% static 'autosMarket/img/imagen-info2.jpg' %} " class="card-img-top " alt="... ">
                                 <div class="card-body bg-dark " style="color: white; ">
                                     <h5 class="card-title ">¿Sabías que podemos vender tu auto por ti?</h5>
                                     <hr>
@@ -143,14 +111,16 @@
         </article>
     </section>
 
-    <!-- Incluyendo footer -->
-    <div data-include="assets/footer.html "></div>
-
-
     <!-- SCRIPTS -->
     <script type="text/javascript " src="js/formulario-validacion.js "></script>
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js " integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf " crossorigin="anonymous "></script>
 </body>
 
-</html>
+
+{% endblock %}
+
+
+
+
+
