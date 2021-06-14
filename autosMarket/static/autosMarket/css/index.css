@@ -1,0 +1,228 @@
+html {
+    box-sizing: border-box;
+}
+
+
+
+
+/* NavBar */
+
+.logo-empresa {
+    font-size: 1rem;
+}
+
+.btn-outline-success {
+    color: #f9fafb;
+    border-color: #f9fafb;
+}
+
+.btn-outline-success:hover {
+    color: black;
+    background-color: white;
+    border-color: black;
+}
+
+.btn {
+    height: 38px;
+}
+
+.buscar {
+    margin-right: 10px;
+}
+
+.btn-vende:hover {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.nav-item {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.navbar-nav li:hover>ul.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+}
+
+.dropdown-menu>li>a:hover:after {
+    text-decoration: underline;
+    transform: rotate(-90deg);
+}
+
+.btn-group-lg>.btn,
+.btn-lg {
+    font-size: 1rem;
+}
+
+.form-control {
+    height: 35px;
+}
+
+.icono {
+    height: 35px;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+}
+
+
+/* *** HeroImage principal y secundario*** */
+
+.hero-image {
+    /*Usando variable CSS del estilo en línea de .hero-image para poner la URL de la imagen*/
+    background-image: url('../img/heroImage.jpg');
+    /*Quitando el efecto de repitición de la imagen*/
+    background-repeat: no-repeat;
+    /*Haciendo que la imagen ocupe todo el ancho*/
+    background-size: cover;
+    /*Centrando imagen en su contenedor*/
+    background-position: center;
+    /*Dejando fijada la imagen para que el contenido del sitio pase sobre ella
+    (usando fixed en background-attachment)*/
+    background-attachment: fixed;
+}
+
+.hero-image-opacity {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-image-title {
+    font-size: 5.5vw;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.contenido .hero-image {
+    background-image: url('../img/heroImage-services.jpg');
+    background-attachment: scroll;
+}
+
+.contenido .hero-image-opacity {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.hero-image.hero-image-contacto {
+    background-image: url('../img/heroImage-contacto.jpg');
+}
+
+.hero-image.hero-image-galeria {
+    background-image: url('../img/heroImage-galeria.jpg');
+}
+
+.hero-image.hero-image-usado {
+    background-image: url('../img/heroImage-usado.jpg');
+}
+
+.hero-image.hero-image-nuevo {
+    background-image: url('../img/hero-image-nuevos.jpg');
+}
+
+
+/*Configuracion texto dentro de carrusel*/
+
+.texto-carrusel {
+    background-color: rgba(41, 23, 1, 0.75);
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding-left: 10px;
+    width: 450px;
+    margin: 0;
+    opacity: 0.9;
+    text-align: justify;
+}
+
+/* FOOTER */
+
+.footer {
+    margin-top: 9rem;
+    padding: 20px;
+    color: white;
+    display: flex;
+    text-align: center;
+}
+
+.logo-footer {
+    float: left;
+    padding-top: 30px;
+}
+
+.social {
+    text-align: right;
+    padding-top: 50px;
+}
+
+.social li {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.social a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.derechos {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .contenido .hero-image-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .hero-image-content .container {
+        order: 0;
+    }
+    .section-title {
+        grid-column: span 3;
+    }
+    .info {
+        max-width: 500px;
+        max-height: 300px;
+    }
+    .info p {
+        margin-bottom: auto;
+        font-size: 1rem;
+        width: auto;
+        margin: 0 auto;
+        padding: 1rem 0;
+    }
+    .info img {
+        margin-top: auto;
+    }
+    .footer {
+        margin-top: auto;
+    }
+    .contenido .hero-image {
+        background-image: url('../img/heroImage-services.jpg');
+    }
+    .slide blockquote {
+        font-size: 1rem;
+        width: auto;
+    }
+    .slide h3 {
+        font-size: 1.5rem;
+    }
+    .slide h6 {
+        font-size: 1.2rem;
+    }
+}

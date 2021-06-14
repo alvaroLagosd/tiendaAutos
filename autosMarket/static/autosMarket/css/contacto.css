@@ -1,0 +1,213 @@
+/* *** Contact Form *** */
+body{
+    background-color: #ffffff;
+}
+
+
+.btn-contact {
+    border-radius: .5rem;
+    padding: 1rem;
+    display: inline-block;
+    width: 200px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #343a40;
+    text-transform: uppercase;
+}
+
+.box-shadow-1 {
+    box-shadow: .25rem .25rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+.contact-form{
+    --form-ok-color: #4caf50;
+    --form-error-color: #f44336;
+
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 800px;
+}
+
+.contact-form > *{
+    padding: .5rem;
+    margin: 1rem auto;
+    display: block;
+    width: 100%;
+    outline: none;
+}
+
+.contact-form input,
+.contact-form textarea{
+    font-size: .85rem;
+}
+
+.contact-form input{
+    border: 0;
+    padding-left: 0.5rem;
+    border-bottom: thin solid #666666;
+}
+
+.contact-form textarea{
+    border: thin solid #666666;
+    /* Esta propiedad permite que el area de texto no se redimensione */
+    resize: none;
+}
+
+.contact-form input[type="submit"]{
+    margin-top: 0;
+    cursor: pointer;
+    transition: all .5s ease-out;
+}
+
+.contact-form input[type="submit"]:hover{
+    opacity: .75;
+}
+
+.contact-form *::placeholder{
+    color: #666666;
+}
+
+.contact-form-response{
+    padding: 1rem;
+    width: 400px;
+    text-align: center;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+}
+
+.contact-form-response svg{
+    margin-top: 2rem;
+    width: 4rem;
+    height: 4rem;
+    fill: #343a40;
+}
+
+
+.modal#gracias:target{
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+
+}
+
+
+/* Seleccionando todos los elementos del formulario que tengan el atributo 'required' y que hayan sido validados
+correctamente. La pseudo-clase :valid da estilos al contenido texto que haya sido validado en un formulario*/
+.contact-form [required]:valid{
+    border: thin solid var(--form-ok-color);/*agrega borde verde al <input> o <textarea>*/
+}
+  
+/* Seleccionando todos los elementos del formulario que tengan el atributo 'required' y que hayan sido incorrectos
+el ingreso. La pseudo-clase :invalid da estilos al contenido texto que haya sido incorrecto con la validación de un
+formulario*/
+.contact-form [required]:invalid{
+  border: thin solid var(--form-error-color);/*agrega borde rojo al <input> o <textarea>*/
+}
+  
+  
+.contact-form-error{
+  margin-top: -1rem;
+  font-size: 90%;
+  background-color: var(--form-error-color);
+  color: #fff;
+  transition: all 800ms ease;
+}
+  
+.contact-form-error.is-active{
+  display: block;
+  /*Creando animación que se llama 'show-message', dura 1s, se ejecuta solo 1 vez de forma normal, tiene 0s de
+  retardo, tiene el efecto de animación ease-out y el 'both' significa que va a conservar los estilos con la que
+  la animación termine*/
+  animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.none{
+    display: none;
+}
+
+
+/* @keyframes permite a los autores controlar los pasos intermedios en una secuencia de animación CSS mediante 
+el establecimiento de keyframes (o puntos de trayectoria) a lo largo de la secuencia de animación que debe 
+ser alcanzado por determinados puntos durante la animación. */
+@keyframes show-message{ /*Controlando animación*/
+    /* La animacion empezará siendo no visible */
+    0%{
+      visibility: hidden;
+      opacity: 0;
+    }
+    /* La animacion terminará siendo visible */
+    100%{
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  
+
+
+
+
+@media screen and (min-width: 1024px){
+    .contact-form{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea{
+        font-size: 1rem;
+    }
+
+    .contact-form textarea,
+    .contact-form-loader{
+        grid-column: span 2;
+    }
+
+    .contact-form input[type="submit"]{
+        margin-left: 0;
+    }
+
+    #nombre{
+        grid-row: 2 / 3;
+    }
+
+    #correo{
+        grid-column: 2 / 3;
+    }
+
+    #comentarios{
+        grid-column: span 2;
+    }
+
+
+}
+
+/* *** Ventana Modal *** */
+.modal{
+    position: fixed;
+    z-index: 999;
+    /* Se usa top,right,bottom y left en 0 para que la caja se estire en toda la pantalla */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1s;
+}
+
+.modal-content{
+    position: relative;
+    width: 40%;
+}
+
+
+
+
