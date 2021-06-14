@@ -5,6 +5,43 @@
 {% load static %}
 {% block contenido %}
 
+<body>
 
+    <!-- HeroImage -->
+    <section class="home">
+        <article class="hero-image hero-image-usado">
+            <aside class="hero-image-opacity">
+                <div class="hero-image-content">
+                    <h2 class="hero-image-title ">
+                        ¿Sabías que tenemos autos usados?<br>¡De todo en Raio Macuin!
+                    </h2>
+                </div>
+            </aside>
+        </article>
+    </section>
+
+    <!-- Consumiendo API de Stripe -->
+    <h2 class="title-usados">Autos Usados Recomendados</h2>
+     
+    <section id="autos" class="autos">
+        
+    </section>
+
+    <template id="auto-template">
+        <figure class="auto">
+            <img>
+            <figcaption></figcaption>
+        </figure>
+    </template>
+
+    <!-- SCRIPTS -->
+    <script type="text/javascript" src="js/formulario-validacion.js"></script>
+    <!-- Librería Stripe para pagos online -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="js/stripe-checkout.js" type="module"></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js " integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf " crossorigin="anonymous "></script>
+</body>
 
 {% endblock %}

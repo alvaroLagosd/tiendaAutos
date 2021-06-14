@@ -4,7 +4,44 @@
 <!-- Tag DJANGO -->
 {% load static %}
 {% block contenido %}
+</head>
 
+<!-- HeroImage -->
+<section class="home">
+    <article class="hero-image hero-image-nuevo">
+        <aside class="hero-image-opacity">
+            <div class="hero-image-content">
+                <h2 class="hero-image-title ">
+                    Visita nuestros nuevos modelos 2021 disponibles! <br> ¡Aprovecha la preventa 2022 Raio Macuin!
+                </h2>
+            </div>
+        </aside>
+    </article>
+</section>
+  
+<h2 class="title-usados">Autos Nuevos Disponibles</h2>
+<!-- Templates  -->
+<section id="autos" class="autos"></section>
+
+<!-- Valores en blanco, que despues tomaran un valor dinamico -->
+<template id="template-auto">
+<figure class="auto">
+    <img>
+    <figcaption></figcaption>
+</figure>
+</template>
+
+
+<!-- SCRIPTS -->
+<script type="text/javascript" src="js/formulario-validacion.js"></script>
+<!-- Script de Stripe -->
+<script src="https://js.stripe.com/v3/"></script>
+<!-- Se configura como modulo ya que el album se invocara desde la api web -->
+<script src="js/stripe-checkout-nuevos.js" type="module"></script>
+<!-- Bootstrap Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js " integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf " crossorigin="anonymous "></script>
+
+</body>
 
 
 {% endblock %}
