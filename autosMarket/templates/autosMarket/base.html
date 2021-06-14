@@ -61,7 +61,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Inicio</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Catálogo </a>
@@ -96,20 +96,20 @@
                                     <hr class="dropdown-divider">
                                 </li>
                             </li>
-                            <li><a class="dropdown-item" href="../autosNuevos.html">Nuevos</a></li>
-                            <li><a class="dropdown-item" href="../autosUsados.html">Usados</a></li>
-                            <li><a class="dropdown-item" href="albumAutos.html">Galeria</a></li>
+                            <li><a class="dropdown-item" href="{% url 'autosNuevos' %}">Nuevos</a></li>
+                            <li><a class="dropdown-item" href="{% url 'autosUsados' %}">Usados</a></li>
+                            <li><a class="dropdown-item" href="{% url 'albumAutos' %}">Galeria</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contacto.html" tabindex="-1" aria-disabled="true">Contacto</a>
+                        <a class="nav-link" href="{% url 'contacto' %}" tabindex="-1" aria-disabled="true">Contacto</a>
                     </li>
                 </ul>
                 <form class="d-flex buscar">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Buscar</button>
                 </form>
-                <a href="vendeauto.html">
+                <a href="{% url 'vendeauto' %}">
                     <button style="margin: 10px;" type="button" class="btn btn-light btn-vende">Vende tu auto</button>
                 </a>
                 <a href="#" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
