@@ -119,3 +119,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+import os 
+#media url es lo que saldra al principio de la url
+MEDIA_URL = '/media/'
+#Fija la ruta del directorio raiz de media, base dir tiene la ruta hacia el proyecto 
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")

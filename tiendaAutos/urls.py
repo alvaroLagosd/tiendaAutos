@@ -15,9 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+#cargar settings con las variables, la url debe apuntar al directorio fisico 
+from django.conf import settings 
+#cargar los archivos en static 
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # se incluye las rutas que estan en el urls de la pagina principal
     path('', include('autosMarket.urls')),
 ]
+
+#si la variable debug esta en true, la aplicacion no esta en produccion no en produccion
+#url patterns enlaza la url /media/, almacenada en la variable media_url, que apunta hacia las imagenes, con el directorio raiz del proyecto declarado 
+#en la variable media_root   
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
