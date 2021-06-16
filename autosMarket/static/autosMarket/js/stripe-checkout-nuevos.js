@@ -1,5 +1,5 @@
 /// llamar al archivo keys en la variable STRIPE_KEYS 
-import STRIPE_KEYS from '../assets/stripe-keys-nuevo.js';
+import STRIPE_KEYS from '../js/stripe-keys-nuevo.js';
 
 //console.log(STRIPE_KEYS);
 // print para revisar que las claves se importaron correctamente 
@@ -110,8 +110,9 @@ Promise.all([
             lineItems:[{price, quantity:1}],
             // medio de pago definido como pago unico
             mode: "payment", 
-            successUrl: "http://127.0.0.1:5501/assets/stripe-success.html",
-            cancelUrl: "http://127.0.0.1:5501/assets/stripe-cancel.html"
+            successUrl: "http://127.0.0.1:8000/autosMarket/templates/autosMarket/assets/stripe-success.html",
+            cancelUrl: "http://127.0.0.1:8000/autosMarket/templates/autosMarket/assets/stripe-cancel.html"
+            
         })
         .then(res => {
             console.log(res);
