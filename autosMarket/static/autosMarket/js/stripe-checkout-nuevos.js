@@ -1,9 +1,15 @@
-/// llamar al archivo keys en la variable STRIPE_KEYS 
-import STRIPE_KEYS from '../js/stripe-keys-nuevo.js';
+// import STRIPE_KEYS from '../js/stripe-keys.js';
 
-//console.log(STRIPE_KEYS);
-// print para revisar que las claves se importaron correctamente 
+console.log("Sanity check!");
 
+// new
+// Get Stripe publishable key
+fetch("/config/")
+.then((result) => { return result.json(); })
+.then((data) => {
+  // Initialize Stripe.js
+  const stripe = Stripe(data.publicKey);
+});
 
 // declara la constante d donde se cargara el DOM
 const d = document,

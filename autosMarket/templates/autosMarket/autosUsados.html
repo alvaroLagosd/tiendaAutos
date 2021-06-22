@@ -46,20 +46,12 @@
         </figure>
     </template>
 
-
-    {% block js %}
-    <!-- SCRIPTS -->
-    <script type="text/javascript" src="{% static 'autosMarket/js/formulario-validacion.js' %}"></script>
-    <!-- Librería Stripe para pagos online -->
-    <script src="https://js.stripe.com/v3/"></script>
-    <script src="{% static 'autosMarket/js/stripe-checkout.js' %}" type="module"></script>
-
-   {% endblock %}
-
-
-
-
-
-
 </body>
+{% endblock %}
+
+
+{% block js %}
+<script type="text/javascript" src="{% static 'autosMarket/js/formulario-validacion.js' %}"></script>
+<script src="https://js.stripe.com/v3/"></script>
+<script type="module"  src="{% static 'autosMarket/js/stripe-checkout.js' %}" ></script> 
 {% endblock %}

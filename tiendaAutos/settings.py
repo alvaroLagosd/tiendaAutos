@@ -125,3 +125,6 @@ import os
 MEDIA_URL = '/media/'
 #Fija la ruta del directorio raiz de media, base dir tiene la ruta hacia el proyecto 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51ImmePBjm79XRSQxCDIywcRGZBeFvF98ZCrrnQcUuEoLysyEpmalPxWDfugmhXDhcd1aNDgN7ooU9DA8s4ARSt4U00QTJCLmVL'
+STRIPE_SECRET_KEY = 'sk_test_51ImmePBjm79XRSQxB2iDBHTmJNyRkNZmQWZ5jgepDvHLle4TriUKBmVOy0MFHDvG1oP0K1rxvIBnEWkaNsWz8Kew00MVg6QzTH'

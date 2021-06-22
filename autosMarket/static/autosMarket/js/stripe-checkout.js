@@ -1,4 +1,16 @@
-import STRIPE_KEYS from '../js/stripe-keys.js';
+// import STRIPE_KEYS from '../js/stripe-keys.js';
+
+console.log("Sanity check!");
+
+// new
+// Get Stripe publishable key
+fetch("/config/")
+.then((result) => { return result.json(); })
+.then((data) => {
+  // Initialize Stripe.js
+  const stripe = Stripe(data.publicKey);
+});
+
 
 // console.log(STRIPE_KEYS);
 

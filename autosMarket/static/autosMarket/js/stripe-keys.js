@@ -1,5 +1,5 @@
 //Exportando Objeto con clave pública y clave secreta de la API de Stripe
 export default {
-    public: "pk_test_51ImNB4Kn8CdVNFBVLUjRJ4ouBrfXj8haLXUjjedsTxlQOaXKtL1UMvHVIw7S352vAWvMUfMI6GP35aMHkUAEA14S00QQA53Sdk",
-    secret:"sk_test_51ImNB4Kn8CdVNFBV0y06qgQrZBUUgaGU1DkyueZ6LNukoHqkDle9C9rtjxEsvwSF7Jwjx2hsqxYUgSDKplgz8fYf006vPMNLwC"
+    public: "pk_test_51ImmePBjm79XRSQxCDIywcRGZBeFvF98ZCrrnQcUuEoLysyEpmalPxWDfugmhXDhcd1aNDgN7ooU9DA8s4ARSt4U00QTJCLmVL",
+    secret:"sk_test_51ImmePBjm79XRSQxB2iDBHTmJNyRkNZmQWZ5jgepDvHLle4TriUKBmVOy0MFHDvG1oP0K1rxvIBnEWkaNsWz8Kew00MVg6QzTH"
 }
