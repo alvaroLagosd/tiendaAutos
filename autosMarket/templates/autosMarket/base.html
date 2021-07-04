@@ -97,6 +97,20 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'contacto' %}" tabindex="-1" aria-disabled="true">Contacto</a>
                     </li>
+                    &nbsp;
+                    <!-- AUTORIZACIONES, dependiendo de los permisos del usuario logueado se mostraran las acciones que podra realizar -->
+                  {% if perms.autosMarket.add_producto %}
+                   <li>
+                   <a href="#"> Agregar Producto </a> 
+                   </li>
+                   {% endif %}
+                   {% if perms.autosMarket.view_producto %}
+                   &nbsp;
+                   <li>
+                   <a href="#"> Listado productos </a> 
+                   </li>
+                   &nbsp;
+                   {% endif %}.autosMarket               
                     {% if user.is_authenticated%}
                     <li>
                     <a href="{% url 'logout' %}">Cerrar Sesión</a>
