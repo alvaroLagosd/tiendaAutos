@@ -97,8 +97,22 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'contacto' %}" tabindex="-1" aria-disabled="true">Contacto</a>
                     </li>
+                    {% if user.is_authenticated%}
+                    <li>
+                    <a href="{% url 'logout' %}">Cerrar Sesión</a>
+                    </li>
+                    &nbsp;
+                    <li>
+                        <a href="#">{{ user.username }}</a>
+                    </li>
+                    {% else %}
+                    <li>
+                    <a href="{% url 'login' %}">Iniciar Sesión</a>
+                    </li>
+                    {% endif %}
+                
                 </ul>
-                <form class="d-flex buscar">
+                <!-- <form class="d-flex buscar">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Buscar</button>
                 </form>
@@ -110,7 +124,7 @@
                 </a>
                 <a style="color: white; margin-right: 10px;" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Login
-                </a>
+                </a> -->
             </div>
         </div>
     </nav>
