@@ -1,8 +1,10 @@
-from django.shortcuts import render
-
+from django.shortcuts import render, redirect
+from .forms import CustomUserCreationForm
 from django.conf import settings # new
 from django.http.response import JsonResponse # new
 from django.views.decorators.csrf import csrf_exempt # new
+from django.contrib.auth import authenticate, login 
+from django.contrib import messages
 
 
 
@@ -39,3 +41,30 @@ def stripe_config(request):
     if request.method == 'GET':
         stripe_config = {'publicKey': settings.STRIPE_PUBLISHABLE_KEY}
         return JsonResponse(stripe_config, safe=False)
+
+
+#Se importa el formulario custom creado en forms para poder visualizarlo cargandolo en la variable data 
+def registro(request):
+    data = {
+        'form': CustomUserCreationForm()
+    }
+    #si el metodo de solicitud html es de tipo POST, se guarda el formulario en la variable del mismo nombre
+    #Se valida el formulario se guarda con save  
+    if request.method == 'POST':
+        formulario = CustomUserCreationForm(data=request.POST)
+        if formulario.is_valid():
+            formulario.save()
+            #autenticar al usuario, crea la variable usuario que obtiene el username y password1
+            #Se utiliza el diccionario cleaned_data
+            user = authenticate(username=formulario.cleaned_data["username"], password=formulario.cleaned_data["password1"])
+            #Se realiza el login del usuario, se utiliza el request ya que el metodo lo utiliza internamente
+            login(request, user)
+            #Se envia un mensaje de acceso exitoso 
+            messages.success(request, "Usuario registrado correctamente")           
+            #redirigir al home
+            return redirect(to="home")
+        #En caso contrario se reescribe el formulario
+        data["form"] = formulario
+
+
+    return render(request, 'registration/registro.html', data)
