@@ -1,16 +1,20 @@
 from django.shortcuts import render, redirect
+from .models import Producto
 from .forms import CustomUserCreationForm
 from django.conf import settings # new
 from django.http.response import JsonResponse # new
 from django.views.decorators.csrf import csrf_exempt # new
 from django.contrib.auth import authenticate, login 
 from django.contrib import messages
-
-
-
+from rest_framework import viewsets
+from .serializers import ProductoSerializer
 # Create your views here.
 
 #Crea una funcion que retorna la vista de la url que se declara
+
+class ProductoViewset(viewsets.ModelViewSet):
+    queryset = Producto.objects.all()
+    serializer_class = ProductoSerializer
 
 def home(request):
     return render(request, 'autosMarket/home.html')
