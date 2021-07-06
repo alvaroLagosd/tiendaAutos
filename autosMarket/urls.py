@@ -1,12 +1,13 @@
 from django.urls import path, include
 from .views import home, albumAutos, autosNuevos, autosUsados, contacto,\
-     vendeauto, registro, ProductoViewset
+     vendeauto, registro, ProductoViewset, MarcaViewset
 #importa la vista desde template el home
 from . import views
 from rest_framework import routers
 
 router = routers.DefaultRouter()
 router.register('producto', ProductoViewset)
+router.register('marca', MarcaViewset)
 
 
 urlpatterns = [

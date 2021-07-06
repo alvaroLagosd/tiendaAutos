@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Producto
+from .models import Producto, Marca
 from .forms import CustomUserCreationForm
 from django.conf import settings # new
 from django.http.response import JsonResponse # new
@@ -7,14 +7,29 @@ from django.views.decorators.csrf import csrf_exempt # new
 from django.contrib.auth import authenticate, login 
 from django.contrib import messages
 from rest_framework import viewsets
-from .serializers import ProductoSerializer
+from .serializers import ProductoSerializer, MarcaSerializer
 # Create your views here.
 
 #Crea una funcion que retorna la vista de la url que se declara
+#Metodo get queryset permite que las consultas se puedan filtrar segun parametros  
+
+class MarcaViewset(viewsets.ModelViewSet):
+    queryset = Marca.objects.all()
+    serializer_class = MarcaSerializer
 
 class ProductoViewset(viewsets.ModelViewSet):
     queryset = Producto.objects.all()
     serializer_class = ProductoSerializer
+
+    def get_queryset(self):
+        productos = Producto.objects.all()
+
+        nombre = self.request.GET.get('nombre')
+
+        if nombre:
+            productos = productos.filter(nombre__contains=nombre)
+
+        return productos
 
 def home(request):
     return render(request, 'autosMarket/home.html')
