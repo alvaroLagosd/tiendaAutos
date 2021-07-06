@@ -30,6 +30,10 @@ ALLOWED_HOSTS = []
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 
+#AUTENTICACION FACEBOOK 
+SOCIAL_AUTH_FACEBOOK_KEY = "241835180813558"
+SOCIAL_AUTH_FACEBOOK_SECRET = "ef3614b58420865cd6210b26cf5c4217"
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -42,6 +46,7 @@ INSTALLED_APPS = [
     'autosMarket',
     'crispy_forms',
     'rest_framework',
+    'social_django',
 ]
 
 CRISPY_TEMPLATE_PACK ='bootstrap4'
@@ -134,3 +139,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 STRIPE_PUBLISHABLE_KEY = 'pk_test_51ImmePBjm79XRSQxCDIywcRGZBeFvF98ZCrrnQcUuEoLysyEpmalPxWDfugmhXDhcd1aNDgN7ooU9DA8s4ARSt4U00QTJCLmVL'
 STRIPE_SECRET_KEY = 'sk_test_51ImmePBjm79XRSQxB2iDBHTmJNyRkNZmQWZ5jgepDvHLle4TriUKBmVOy0MFHDvG1oP0K1rxvIBnEWkaNsWz8Kew00MVg6QzTH'
+
+#METODO QUE SE ENCARGA DE GUARDAR LOS DATOS DE LOGIN USUARIO DE FACEBOOK EN LA BASE DE DATOS DE TIENDAAUTOS
+AUTHENTICATION_BACKENDS = [
+    'social_core.backends.facebook.FacebookOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+]

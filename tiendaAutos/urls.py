@@ -25,6 +25,7 @@ urlpatterns = [
     # se incluye las rutas que estan en el urls de la pagina principal
     path('', include('autosMarket.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('social-auth/', include('social_django.urls', namespace="social")),
 ]
 
 #si la variable debug esta en true, la aplicacion no esta en produccion no en produccion
