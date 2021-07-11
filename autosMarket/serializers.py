@@ -32,6 +32,7 @@ class ProductoSerializer(serializers.ModelSerializer):
         
         return value
   
+  
     class Meta: 
         model = Producto
         fields = '__all__'
